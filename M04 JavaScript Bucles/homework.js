@@ -204,22 +204,11 @@ function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
-   if (((num/100) > 0) && ((num/100) < 10)){
+   if (num > 99 && num < 1000 ){
       return true
-   } else{
+   }else{
       return false
-   }
-   //OP2 ----------------------------------
-   // var contador = 1
-   // while(num>0){
-   //    num = num / 10
-   //    contador = contador + 1;
-   // }
-   // if (contador == 3){
-   //    return true
-   // } else{
-   //    return false
-   // }
+   }   
 }
 
 function doWhile(num) {

@@ -5,13 +5,9 @@ function obtenerMayor(x, y) {
    // Retornar el número más grande.
    // Si son iguales, retornar cualquiera de los dos.
    // Tu código:   
-   if (x>y){
-      return x
-   }else if (x<y){
-      return y
-   }else{
-      return x
-   }
+   if (x>y) return x;
+   else if (x<y) return y;
+   else return x; 
 }
 
 function mayoriaDeEdad(edad) {
@@ -19,11 +15,8 @@ function mayoriaDeEdad(edad) {
    // Si tiene 18 años ó más debe retornar el string: "Allowed".
    // Caso contrario: "Not allowed".
    // Tu código:
-   if(edad>=18){
-      return 'Allowed'
-   }else{
-      return 'Not allowed'
-   }
+   if(edad>=18) return 'Allowed';
+   else return 'Not allowed'
 }
 
 function conection(status) {
@@ -204,6 +197,15 @@ function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
+
+   // if (num/100 > 0 && num/100 < 10)
+   // {
+   //    return true
+   // }
+   // else{
+   //    return false
+   // }
+
    if (num > 99 && num < 1000 ){
       return true
    }else{

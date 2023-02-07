@@ -150,9 +150,12 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
-   // if(){
-   //    return true
-   // }else return false
+   var texto = num.toString();
+   var primerValor = texto.charAt(0);
+   if(primerValor === '9'){
+      return true;
+   }
+   else return false;   
 }
 
 function todosIguales(array) {

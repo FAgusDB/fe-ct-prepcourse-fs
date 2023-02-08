@@ -80,13 +80,11 @@ function tienePropiedad(objeto, propiedad) {
    // Verifica si el objeto recibido posee una propiedad con el mismo nombre que el parámetro "propiedad".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-   // for (var i = 0; i < objeto.length ; i++){
-   //    if(objeto[i] == propiedad){
-   //       return true
-   //    }      
-   // }
-   // return false
-   
+   if (objeto.hasOwnProperty(propiedad)) {
+      return true;
+        } else {
+          return false;
+      }
    // if(objeto.propiedad == propiedad){
    //    return true
    // }else return false
@@ -155,15 +153,20 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // PorcentajeDeDescuento ---> 0.2
    // Precio final ---> 8
    // Tu código:   
-   objetoProducto = {
-      calcularPrecioDescuento: function(){
-         // var descuento = 0
-         var precioFinal = 0
-         // descuento = objetoProducto[precio] * objetoProducto[porcentajeDeDescuento]
-         // precioFinal = objetoProducto[precio] - descuento
-         return precioFinal
-      }
+   objetoProducto.calcularPrecioDescuento = function () {
+      var descuento = objetoProducto.precio * objetoProducto.porcentajeDeDescuento
+      objetoProducto["Precio Final"] = objetoProducto.precio - descuento
+      return objetoProducto["Precio Final"]
    }
+   return objetoProducto
+   // objetoProducto = {
+   //    calcularPrecioDescuento: function(){
+   //       // var descuento = 0
+   //       var precioFinal = 0
+   //       // descuento = objetoProducto[precio] * objetoProducto[porcentajeDeDescuento]
+   //       // precioFinal = objetoProducto[precio] - descuento
+   //       return precioFinal
+   //    }
    
 }
 
